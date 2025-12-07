@@ -1,10 +1,11 @@
 file("project-versions.json").readLines().forEach(::println)
 buildscript {
     repositories {
-        google()
-        mavenCentral()
-        maven("https://www.jitpack.io")
+        maven("https://maven.aliyun.com/repository/google")
+        maven ("https://maven.aliyun.com/nexus/content/repositories/google")
+        maven ("https://maven.aliyun.com/nexus/content/groups/public")
         maven("https://maven.aliyun.com/repository/central")
+        maven("https://www.jitpack.io")
     }
     dependencies {
         classpath(libs.groovy.json)
